@@ -9,9 +9,11 @@ generator client {
   binaryTargets = ["native", "debian-openssl-3.0.x"]
 }
 
+
+// database url for deployment purpose
 datasource db {
   provider = "mysql"
-  url      = env("DATABASE_URL")
+  url      = "mysql://avnadmin:AVNS_KpsP1cXh8l6FirSXTeS@mysql-1e691765-margamvinay.c.aivencloud.com:12569/jobboard"
 }
 
 
