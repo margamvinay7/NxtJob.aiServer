@@ -4,5 +4,5 @@ services:
     build: .
     ports:
       - "3000:3000"
-    # environment:
-    #   - DATABASE_URL=""
+    environment:
+      - DATABASE_URL="mysql://avnadmin:AVNS_KpsP1cXh8l6FirSXTeS@mysql-1e691765-margamvinay.c.aivencloud.com:12569/jobboard"

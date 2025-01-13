@@ -10,10 +10,10 @@ COPY . .
 RUN npm run build
 
 # Generate Prisma client, specify the schema path
-# RUN npx prisma generate --schema=./src/prisma/schema.prisma
+RUN npx prisma generate --schema=./src/prisma/schema.prisma
 
-# # Apply migrations in production, specify the schema path
-# RUN npx prisma migrate deploy --schema=./src/prisma/schema.prisma
+# Apply migrations in production, specify the schema path
+RUN npx prisma migrate deploy --schema=./src/prisma/schema.prisma
 
 ENV NODE_ENV=production
 ENV DATABASE_URL=${DATABASE_URL}
