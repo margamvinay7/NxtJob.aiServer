@@ -13,7 +13,9 @@ const PORT = process.env.PORT || 3000;
 
 const swaggerDocument = YAML.load(path.join(__dirname, "../swagger.yml"));
 
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+// using '/' route for swagger ui testing for easy purpose
+app.use("/", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+// app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.use(express.json());
 app.use(rateLimiter);
