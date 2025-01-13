@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - DATABASE_URL=mysql://root:0710@host.docker.internal:3306/jobboard
