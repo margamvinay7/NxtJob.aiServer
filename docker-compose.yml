@@ -5,4 +5,4 @@ services:
     ports:
       - "3000:3000"
     # environment:
-    #   - DATABASE_URL=mysql://root:0710@host.docker.internal:3306/jobboard
+    #   - DATABASE_URL=""
